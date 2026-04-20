@@ -25,23 +25,29 @@ Consider a house belonging to the old cat lady, who has several cats (C represen
 (group) Create two implementations of the given scenario with:
   1. threads
   2. processes
+     
 (group) Try various configurations of the scenario parameters to test whether the symbiosis works well and is never stuck:
-the number of bowls (B)
-the number of cats (C)
-the number of mice (M)
-the duration of a cat feeding (F in time units, could also be a random interval)
-the duration of a cat not being hungry (N in time units, could also be a random interval)
+  1. the number of bowls (B)
+  2. the number of cats (C)
+  3. the number of mice (M)
+  4. the duration of a cat feeding (F in time units, could also be a random interval)
+  5. the duration of a cat not being hungry (N in time units, could also be a random interval)
+
 (group) Discuss the critical synchronization points and how you solved them.
+
 (group) Compare both implementation approaches (threads and processes) and discuss the advantages and disadvantages of each. As a result, choose the best approach to be used in the second part of the scenario.
+
 (individual) Reflect your individual performance and your team members' performance.
-Deliverables
+
+**Deliverables**
 (group): One zip file per group containing:
-The source code of the implementation of the scenario with threads.
-The source code of the implementation of the scenario with processes.
-The document containing all non-coding parts of the group project:
-The discussion about the synchronization points and the justification of the used techniques.
-The discussion about both implemented approaches (pros and cons, similarities and differences).
-The worklog showing the project participation of all group members.
+  1. The source code of the implementation of the scenario with threads.
+  2. The source code of the implementation of the scenario with processes.
+  3. The document containing all non-coding parts of the group project:
+  4. The discussion about the synchronization points and the justification of the used techniques.
+  5. The discussion about both implemented approaches (pros and cons, similarities and differences).
+  6. The worklog showing the project participation of all group members.
+     
 (individual): One document in the form of a PDF with the reflection.
 
 **AI policy**

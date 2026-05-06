@@ -4,20 +4,21 @@
 #include <pthread.h>
 #include <semaphore.h>
 
-// Counters
+/* ── Configuration ─────────────────────────────────────────────────────────── */
 typedef struct {
-    int numBowls;   
-    int numCats;  
-    int numMice;  
-    int catEat; 
-    int catFull; 
+    int numBowls;
+    int numCats;
+    int numMice;
+    int catEat;
+    int catFull;
 } Config;
 
-// Shared state
+/* ── Shared simulation state ────────────────────────────────────────────────── */
 typedef struct {
     Config cfg;
 
-    // Bowl and cat semaphores
+    /* Bowl semaphores – one pool for cats, one for mice.
+       Both initialised to cfg.B so at most B of each can feed at once. */
     sem_t cat_bowls;
     sem_t mouse_bowls;
 
@@ -41,15 +42,15 @@ typedef struct {
     SimState *state;
 } MouseArgs;
 
-// Animal functions
+/* ── Function declarations ──────────────────────────────────────────────────── */
 
-// Cat
+/* cat.c */
 void *cat_thread(void *arg);
 
-// Mouse
+/* mouse.c */
 void *mouse_thread(void *arg);
 
 /* Utility – thread-safe timestamped log line */
 void sim_log(const char *fmt, ...);
 
-#endif 
+#endif /* SIMULATION_H */

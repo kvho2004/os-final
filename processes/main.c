@@ -47,10 +47,13 @@ void cat_logic(House *house, int id)
         DEBUG_LOG("cat %d acquired mutex to leave", id);
         house -> cats_waiting--;
         //if no more cats allow all waiting mice to proceed
-        if(house -> cats_waiting == 0 && house -> mice_waiting > 0) {
-            DEBUG_LOG("cat %d is the last cat leaving, broadcasting to %d waiting mice", id, house->mice_waiting);
-            for (int i = 0; i < house -> mice_waiting; i++) {
-                sem_post(house -> mice_can_eat);
+        if(house->cats_waiting == 0) {
+            // Snapshot the count so the loop is stable
+            int to_wake = house->mice_waiting; 
+            DEBUG_LOG("Last cat leaving. Waking %d mice.", to_wake);
+            
+            for (int i = 0; i < to_wake; i++) {
+                sem_post(house->mice_can_eat);
             }
         }
         sem_post(house -> mutex);
@@ -90,7 +93,18 @@ void mouse_logic(House *house, int id)
         sem_wait(house -> bowl_stack);
         DEBUG_LOG("mouse %d acquired bowl", id);
         printf("Mouse %d is eating\n", id);
-        sleep(1);
+
+        //If a cat arrives while mouse is eating, mouse should stop eating and release bowl
+        // Eat in 10 small "bites" of 0.1 seconds each
+        for (int i = 0; i < 10; i++) {
+            usleep(100000); 
+            
+            // Check shared memory for waiting cats
+            if (house->cats_waiting > 0) {
+                DEBUG_LOG("Mouse %d: CAT! SCATTER!", id);
+                break; 
+            }
+        }
         sem_post(house -> bowl_stack);
         DEBUG_LOG("mouse %d released bowl", id);
 
@@ -192,7 +206,7 @@ int main(int argc, char *argv[])
     free(child_pids);
 
     //Take in constants from user call
-    /*
+    
     if (argc == 6) {
         NUM_BOWLS = atoi(argv[1]);
         NUM_CATS = atoi(argv[2]);
@@ -200,7 +214,6 @@ int main(int argc, char *argv[])
         CAT_EAT_TIME = atoi(argv[4]);
         CAT_FULL_TIME = atoi(argv[5]);
     }
-    */
 
     sem_close(house -> mutex);
     sem_close(house -> bowl_stack);

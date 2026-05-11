@@ -1,0 +1,845 @@
+(base) anushkaacharya@Anushkas-Air-5 processes % ./main > output.log                  
+[DEBUG][pid 11064] cat 0 trying to lock mutex before entering, cats_waiting=0
+[DEBUG][pid 11064] cat 0 acquired mutex
+[DEBUG][pid 11064] cat 0 released mutex after entering
+[DEBUG][pid 11064] cat 0 waiting for bowl_stack
+[DEBUG][pid 11064] cat 0 acquired bowl
+[DEBUG][pid 11065] mouse 0 queued while cats_waiting=1
+[DEBUG][pid 11066] cat 1 trying to lock mutex before entering, cats_waiting=1
+[DEBUG][pid 11066] cat 1 acquired mutex
+[DEBUG][pid 11066] cat 1 released mutex after entering
+[DEBUG][pid 11066] cat 1 waiting for bowl_stack
+[DEBUG][pid 11066] cat 1 acquired bowl
+[DEBUG][pid 11067] mouse 1 queued while cats_waiting=2
+[DEBUG][pid 11068] cat 2 trying to lock mutex before entering, cats_waiting=2
+[DEBUG][pid 11068] cat 2 acquired mutex
+[DEBUG][pid 11068] cat 2 released mutex after entering
+[DEBUG][pid 11068] cat 2 waiting for bowl_stack
+[DEBUG][pid 11068] cat 2 acquired bowl
+[DEBUG][pid 11069] mouse 2 queued while cats_waiting=3
+[DEBUG][pid 11070] cat 3 trying to lock mutex before entering, cats_waiting=3
+[DEBUG][pid 11070] cat 3 acquired mutex
+[DEBUG][pid 11070] cat 3 released mutex after entering
+[DEBUG][pid 11070] cat 3 waiting for bowl_stack
+[DEBUG][pid 11070] cat 3 acquired bowl
+[DEBUG][pid 11071] mouse 3 queued while cats_waiting=4
+[DEBUG][pid 11072] cat 4 trying to lock mutex before entering, cats_waiting=4
+[DEBUG][pid 11072] cat 4 acquired mutex
+[DEBUG][pid 11072] cat 4 released mutex after entering
+[DEBUG][pid 11072] cat 4 waiting for bowl_stack
+[DEBUG][pid 11072] cat 4 acquired bowl
+[DEBUG][pid 11073] mouse 4 queued while cats_waiting=5
+[DEBUG][pid 11074] cat 5 trying to lock mutex before entering, cats_waiting=5
+[DEBUG][pid 11074] cat 5 acquired mutex
+[DEBUG][pid 11074] cat 5 released mutex after entering
+[DEBUG][pid 11074] cat 5 waiting for bowl_stack
+[DEBUG][pid 11075] mouse 5 queued while cats_waiting=6
+[DEBUG][pid 11076] cat 6 trying to lock mutex before entering, cats_waiting=6
+[DEBUG][pid 11076] cat 6 acquired mutex
+[DEBUG][pid 11076] cat 6 released mutex after entering
+[DEBUG][pid 11076] cat 6 waiting for bowl_stack
+[DEBUG][pid 11077] mouse 6 queued while cats_waiting=7
+[DEBUG][pid 11078] cat 7 trying to lock mutex before entering, cats_waiting=7
+[DEBUG][pid 11078] cat 7 acquired mutex
+[DEBUG][pid 11078] cat 7 released mutex after entering
+[DEBUG][pid 11078] cat 7 waiting for bowl_stack
+[DEBUG][pid 11079] mouse 7 queued while cats_waiting=8
+[DEBUG][pid 11080] cat 8 trying to lock mutex before entering, cats_waiting=8
+[DEBUG][pid 11080] cat 8 acquired mutex
+[DEBUG][pid 11080] cat 8 released mutex after entering
+[DEBUG][pid 11080] cat 8 waiting for bowl_stack
+[DEBUG][pid 11081] mouse 8 queued while cats_waiting=9
+[DEBUG][pid 11082] cat 9 trying to lock mutex before entering, cats_waiting=9
+[DEBUG][pid 11082] cat 9 acquired mutex
+[DEBUG][pid 11082] cat 9 released mutex after entering
+[DEBUG][pid 11082] cat 9 waiting for bowl_stack
+[MAIN] running children for 30 seconds
+[DEBUG][pid 11083] mouse 9 queued while cats_waiting=10
+[DEBUG][pid 11064] cat 0 released bowl
+[DEBUG][pid 11070] cat 3 released bowl
+[DEBUG][pid 11074] cat 5 acquired bowl
+[DEBUG][pid 11064] cat 0 trying to lock mutex before leaving
+[DEBUG][pid 11070] cat 3 trying to lock mutex before leaving
+[DEBUG][pid 11076] cat 6 acquired bowl
+[DEBUG][pid 11064] cat 0 acquired mutex to leave
+[DEBUG][pid 11064] cat 0 released mutex after leaving
+[DEBUG][pid 11070] cat 3 acquired mutex to leave
+[DEBUG][pid 11070] cat 3 released mutex after leaving
+[DEBUG][pid 11066] cat 1 released bowl
+[DEBUG][pid 11066] cat 1 trying to lock mutex before leaving
+[DEBUG][pid 11066] cat 1 acquired mutex to leave
+[DEBUG][pid 11066] cat 1 released mutex after leaving
+[DEBUG][pid 11078] cat 7 acquired bowl
+[DEBUG][pid 11072] cat 4 released bowl
+[DEBUG][pid 11072] cat 4 trying to lock mutex before leaving
+[DEBUG][pid 11072] cat 4 acquired mutex to leave
+[DEBUG][pid 11072] cat 4 released mutex after leaving
+[DEBUG][pid 11080] cat 8 acquired bowl
+[DEBUG][pid 11068] cat 2 released bowl
+[DEBUG][pid 11068] cat 2 trying to lock mutex before leaving
+[DEBUG][pid 11068] cat 2 acquired mutex to leave
+[DEBUG][pid 11068] cat 2 released mutex after leaving
+[DEBUG][pid 11082] cat 9 acquired bowl
+[DEBUG][pid 11074] cat 5 released bowl
+[DEBUG][pid 11082] cat 9 released bowl
+[DEBUG][pid 11078] cat 7 released bowl
+[DEBUG][pid 11076] cat 6 released bowl
+[DEBUG][pid 11074] cat 5 trying to lock mutex before leaving
+[DEBUG][pid 11078] cat 7 trying to lock mutex before leaving
+[DEBUG][pid 11082] cat 9 trying to lock mutex before leaving
+[DEBUG][pid 11076] cat 6 trying to lock mutex before leaving
+[DEBUG][pid 11074] cat 5 acquired mutex to leave
+[DEBUG][pid 11074] cat 5 released mutex after leaving
+[DEBUG][pid 11080] cat 8 released bowl
+[DEBUG][pid 11080] cat 8 trying to lock mutex before leaving
+[DEBUG][pid 11078] cat 7 acquired mutex to leave
+[DEBUG][pid 11078] cat 7 released mutex after leaving
+[DEBUG][pid 11082] cat 9 acquired mutex to leave
+[DEBUG][pid 11082] cat 9 released mutex after leaving
+[DEBUG][pid 11076] cat 6 acquired mutex to leave
+[DEBUG][pid 11076] cat 6 released mutex after leaving
+[DEBUG][pid 11080] cat 8 acquired mutex to leave
+[DEBUG][pid 11080] cat 8 is the last cat leaving, broadcasting to 10 waiting mice
+[DEBUG][pid 11065] mouse 0 awakened by broadcast
+[DEBUG][pid 11067] mouse 1 awakened by broadcast
+[DEBUG][pid 11080] cat 8 released mutex after leaving
+[DEBUG][pid 11077] mouse 6 awakened by broadcast
+[DEBUG][pid 11075] mouse 5 awakened by broadcast
+[DEBUG][pid 11083] mouse 9 awakened by broadcast
+[DEBUG][pid 11073] mouse 4 awakened by broadcast
+[DEBUG][pid 11069] mouse 2 awakened by broadcast
+[DEBUG][pid 11081] mouse 8 awakened by broadcast
+[DEBUG][pid 11071] mouse 3 awakened by broadcast
+[DEBUG][pid 11065] mouse 0 incremented mice_at_bowls=1
+[DEBUG][pid 11079] mouse 7 awakened by broadcast
+[DEBUG][pid 11065] mouse 0 released mutex
+[DEBUG][pid 11065] mouse 0 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 incremented mice_at_bowls=2
+[DEBUG][pid 11065] mouse 0 acquired bowl
+[DEBUG][pid 11067] mouse 1 released mutex
+[DEBUG][pid 11067] mouse 1 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 acquired bowl
+[DEBUG][pid 11077] mouse 6 incremented mice_at_bowls=3
+[DEBUG][pid 11077] mouse 6 released mutex
+[DEBUG][pid 11077] mouse 6 waiting for bowl_stack
+[DEBUG][pid 11075] mouse 5 incremented mice_at_bowls=4
+[DEBUG][pid 11077] mouse 6 acquired bowl
+[DEBUG][pid 11075] mouse 5 released mutex
+[DEBUG][pid 11075] mouse 5 waiting for bowl_stack
+[DEBUG][pid 11075] mouse 5 acquired bowl
+[DEBUG][pid 11083] mouse 9 incremented mice_at_bowls=5
+[DEBUG][pid 11083] mouse 9 released mutex
+[DEBUG][pid 11083] mouse 9 waiting for bowl_stack
+[DEBUG][pid 11083] mouse 9 acquired bowl
+[DEBUG][pid 11073] mouse 4 incremented mice_at_bowls=6
+[DEBUG][pid 11073] mouse 4 released mutex
+[DEBUG][pid 11073] mouse 4 waiting for bowl_stack
+[DEBUG][pid 11069] mouse 2 incremented mice_at_bowls=7
+[DEBUG][pid 11069] mouse 2 released mutex
+[DEBUG][pid 11069] mouse 2 waiting for bowl_stack
+[DEBUG][pid 11071] mouse 3 incremented mice_at_bowls=8
+[DEBUG][pid 11071] mouse 3 released mutex
+[DEBUG][pid 11071] mouse 3 waiting for bowl_stack
+[DEBUG][pid 11081] mouse 8 incremented mice_at_bowls=9
+[DEBUG][pid 11081] mouse 8 released mutex
+[DEBUG][pid 11081] mouse 8 waiting for bowl_stack
+[DEBUG][pid 11079] mouse 7 incremented mice_at_bowls=10
+[DEBUG][pid 11079] mouse 7 released mutex
+[DEBUG][pid 11079] mouse 7 waiting for bowl_stack
+[DEBUG][pid 11083] mouse 9 released bowl
+[DEBUG][pid 11073] mouse 4 acquired bowl
+[DEBUG][pid 11083] mouse 9 decremented mice_at_bowls=9
+[DEBUG][pid 11083] mouse 9 incremented mice_at_bowls=10
+[DEBUG][pid 11083] mouse 9 released mutex
+[DEBUG][pid 11083] mouse 9 waiting for bowl_stack
+[DEBUG][pid 11069] mouse 2 acquired bowl
+[DEBUG][pid 11071] mouse 3 acquired bowl
+[DEBUG][pid 11065] mouse 0 released bowl
+[DEBUG][pid 11065] mouse 0 decremented mice_at_bowls=9
+[DEBUG][pid 11065] mouse 0 incremented mice_at_bowls=10
+[DEBUG][pid 11065] mouse 0 released mutex
+[DEBUG][pid 11065] mouse 0 waiting for bowl_stack
+[DEBUG][pid 11081] mouse 8 acquired bowl
+[DEBUG][pid 11077] mouse 6 released bowl
+[DEBUG][pid 11077] mouse 6 decremented mice_at_bowls=9
+[DEBUG][pid 11075] mouse 5 released bowl
+[DEBUG][pid 11075] mouse 5 decremented mice_at_bowls=8
+[DEBUG][pid 11075] mouse 5 incremented mice_at_bowls=9
+[DEBUG][pid 11075] mouse 5 released mutex
+[DEBUG][pid 11067] mouse 1 released bowl
+[DEBUG][pid 11075] mouse 5 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 decremented mice_at_bowls=8
+[DEBUG][pid 11077] mouse 6 incremented mice_at_bowls=9
+[DEBUG][pid 11079] mouse 7 acquired bowl
+[DEBUG][pid 11077] mouse 6 released mutex
+[DEBUG][pid 11077] mouse 6 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 incremented mice_at_bowls=10
+[DEBUG][pid 11067] mouse 1 released mutex
+[DEBUG][pid 11067] mouse 1 waiting for bowl_stack
+[DEBUG][pid 11069] mouse 2 released bowl
+[DEBUG][pid 11081] mouse 8 released bowl
+[DEBUG][pid 11073] mouse 4 released bowl
+[DEBUG][pid 11083] mouse 9 acquired bowl
+[DEBUG][pid 11069] mouse 2 decremented mice_at_bowls=9
+[DEBUG][pid 11065] mouse 0 acquired bowl
+[DEBUG][pid 11075] mouse 5 acquired bowl
+[DEBUG][pid 11071] mouse 3 released bowl
+[DEBUG][pid 11073] mouse 4 decremented mice_at_bowls=8
+[DEBUG][pid 11077] mouse 6 acquired bowl
+[DEBUG][pid 11081] mouse 8 decremented mice_at_bowls=7
+[DEBUG][pid 11069] mouse 2 incremented mice_at_bowls=8
+[DEBUG][pid 11069] mouse 2 released mutex
+[DEBUG][pid 11069] mouse 2 waiting for bowl_stack
+[DEBUG][pid 11071] mouse 3 decremented mice_at_bowls=7
+[DEBUG][pid 11073] mouse 4 incremented mice_at_bowls=8
+[DEBUG][pid 11073] mouse 4 released mutex
+[DEBUG][pid 11073] mouse 4 waiting for bowl_stack
+[DEBUG][pid 11081] mouse 8 incremented mice_at_bowls=9
+[DEBUG][pid 11081] mouse 8 released mutex
+[DEBUG][pid 11081] mouse 8 waiting for bowl_stack
+[DEBUG][pid 11071] mouse 3 incremented mice_at_bowls=10
+[DEBUG][pid 11071] mouse 3 released mutex
+[DEBUG][pid 11071] mouse 3 waiting for bowl_stack
+[DEBUG][pid 11079] mouse 7 released bowl
+[DEBUG][pid 11079] mouse 7 decremented mice_at_bowls=9
+[DEBUG][pid 11079] mouse 7 incremented mice_at_bowls=10
+[DEBUG][pid 11079] mouse 7 released mutex
+[DEBUG][pid 11079] mouse 7 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 acquired bowl
+[DEBUG][pid 11065] mouse 0 released bowl
+[DEBUG][pid 11083] mouse 9 released bowl
+[DEBUG][pid 11065] mouse 0 decremented mice_at_bowls=9
+[DEBUG][pid 11065] mouse 0 incremented mice_at_bowls=10
+[DEBUG][pid 11065] mouse 0 released mutex
+[DEBUG][pid 11065] mouse 0 waiting for bowl_stack
+[DEBUG][pid 11077] mouse 6 released bowl
+[DEBUG][pid 11075] mouse 5 released bowl
+[DEBUG][pid 11073] mouse 4 acquired bowl
+[DEBUG][pid 11067] mouse 1 released bowl
+[DEBUG][pid 11069] mouse 2 acquired bowl
+[DEBUG][pid 11083] mouse 9 decremented mice_at_bowls=9
+[DEBUG][pid 11081] mouse 8 acquired bowl
+[DEBUG][pid 11079] mouse 7 acquired bowl
+[DEBUG][pid 11071] mouse 3 acquired bowl
+[DEBUG][pid 11077] mouse 6 decremented mice_at_bowls=8
+[DEBUG][pid 11075] mouse 5 decremented mice_at_bowls=7
+[DEBUG][pid 11067] mouse 1 decremented mice_at_bowls=6
+[DEBUG][pid 11083] mouse 9 incremented mice_at_bowls=7
+[DEBUG][pid 11083] mouse 9 released mutex
+[DEBUG][pid 11083] mouse 9 waiting for bowl_stack
+[DEBUG][pid 11077] mouse 6 incremented mice_at_bowls=8
+[DEBUG][pid 11077] mouse 6 released mutex
+[DEBUG][pid 11077] mouse 6 waiting for bowl_stack
+[DEBUG][pid 11075] mouse 5 incremented mice_at_bowls=9
+[DEBUG][pid 11075] mouse 5 released mutex
+[DEBUG][pid 11075] mouse 5 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 incremented mice_at_bowls=10
+[DEBUG][pid 11067] mouse 1 released mutex
+[DEBUG][pid 11067] mouse 1 waiting for bowl_stack
+[DEBUG][pid 11073] mouse 4 released bowl
+[DEBUG][pid 11065] mouse 0 acquired bowl
+[DEBUG][pid 11073] mouse 4 decremented mice_at_bowls=9
+[DEBUG][pid 11073] mouse 4 incremented mice_at_bowls=10
+[DEBUG][pid 11073] mouse 4 released mutex
+[DEBUG][pid 11073] mouse 4 waiting for bowl_stack
+[DEBUG][pid 11069] mouse 2 released bowl
+[DEBUG][pid 11081] mouse 8 released bowl
+[DEBUG][pid 11069] mouse 2 decremented mice_at_bowls=9
+[DEBUG][pid 11079] mouse 7 released bowl
+[DEBUG][pid 11083] mouse 9 acquired bowl
+[DEBUG][pid 11077] mouse 6 acquired bowl
+[DEBUG][pid 11075] mouse 5 acquired bowl
+[DEBUG][pid 11081] mouse 8 decremented mice_at_bowls=8
+[DEBUG][pid 11079] mouse 7 decremented mice_at_bowls=7
+[DEBUG][pid 11071] mouse 3 released bowl
+[DEBUG][pid 11069] mouse 2 incremented mice_at_bowls=8
+[DEBUG][pid 11067] mouse 1 acquired bowl
+[DEBUG][pid 11069] mouse 2 released mutex
+[DEBUG][pid 11069] mouse 2 waiting for bowl_stack
+[DEBUG][pid 11081] mouse 8 incremented mice_at_bowls=9
+[DEBUG][pid 11081] mouse 8 released mutex
+[DEBUG][pid 11081] mouse 8 waiting for bowl_stack
+[DEBUG][pid 11071] mouse 3 decremented mice_at_bowls=8
+[DEBUG][pid 11079] mouse 7 incremented mice_at_bowls=9
+[DEBUG][pid 11079] mouse 7 released mutex
+[DEBUG][pid 11079] mouse 7 waiting for bowl_stack
+[DEBUG][pid 11071] mouse 3 incremented mice_at_bowls=10
+[DEBUG][pid 11071] mouse 3 released mutex
+[DEBUG][pid 11071] mouse 3 waiting for bowl_stack
+[DEBUG][pid 11065] mouse 0 released bowl
+[DEBUG][pid 11077] mouse 6 released bowl
+[DEBUG][pid 11073] mouse 4 acquired bowl
+[DEBUG][pid 11069] mouse 2 acquired bowl
+[DEBUG][pid 11077] mouse 6 decremented mice_at_bowls=9
+[DEBUG][pid 11077] mouse 6 incremented mice_at_bowls=10
+[DEBUG][pid 11077] mouse 6 released mutex
+[DEBUG][pid 11077] mouse 6 waiting for bowl_stack
+[DEBUG][pid 11065] mouse 0 decremented mice_at_bowls=9
+[DEBUG][pid 11065] mouse 0 incremented mice_at_bowls=10
+[DEBUG][pid 11065] mouse 0 released mutex
+[DEBUG][pid 11081] mouse 8 acquired bowl
+[DEBUG][pid 11065] mouse 0 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 released bowl
+[DEBUG][pid 11067] mouse 1 decremented mice_at_bowls=9
+[DEBUG][pid 11075] mouse 5 released bowl
+[DEBUG][pid 11083] mouse 9 released bowl
+[DEBUG][pid 11067] mouse 1 incremented mice_at_bowls=10
+[DEBUG][pid 11067] mouse 1 released mutex
+[DEBUG][pid 11067] mouse 1 waiting for bowl_stack
+[DEBUG][pid 11079] mouse 7 acquired bowl
+[DEBUG][pid 11071] mouse 3 acquired bowl
+[DEBUG][pid 11075] mouse 5 decremented mice_at_bowls=9
+[DEBUG][pid 11083] mouse 9 decremented mice_at_bowls=8
+[DEBUG][pid 11075] mouse 5 incremented mice_at_bowls=9
+[DEBUG][pid 11075] mouse 5 released mutex
+[DEBUG][pid 11075] mouse 5 waiting for bowl_stack
+[DEBUG][pid 11083] mouse 9 incremented mice_at_bowls=10
+[DEBUG][pid 11083] mouse 9 released mutex
+[DEBUG][pid 11083] mouse 9 waiting for bowl_stack
+[DEBUG][pid 11079] mouse 7 released bowl
+[DEBUG][pid 11071] mouse 3 released bowl
+[DEBUG][pid 11065] mouse 0 acquired bowl
+[DEBUG][pid 11077] mouse 6 acquired bowl
+[DEBUG][pid 11079] mouse 7 decremented mice_at_bowls=9
+[DEBUG][pid 11071] mouse 3 decremented mice_at_bowls=8
+[DEBUG][pid 11079] mouse 7 incremented mice_at_bowls=9
+[DEBUG][pid 11079] mouse 7 released mutex
+[DEBUG][pid 11079] mouse 7 waiting for bowl_stack
+[DEBUG][pid 11071] mouse 3 incremented mice_at_bowls=10
+[DEBUG][pid 11071] mouse 3 released mutex
+[DEBUG][pid 11071] mouse 3 waiting for bowl_stack
+[DEBUG][pid 11069] mouse 2 released bowl
+[DEBUG][pid 11073] mouse 4 released bowl
+[DEBUG][pid 11069] mouse 2 decremented mice_at_bowls=9
+[DEBUG][pid 11067] mouse 1 acquired bowl
+[DEBUG][pid 11081] mouse 8 released bowl
+[DEBUG][pid 11075] mouse 5 acquired bowl
+[DEBUG][pid 11073] mouse 4 decremented mice_at_bowls=8
+[DEBUG][pid 11069] mouse 2 incremented mice_at_bowls=9
+[DEBUG][pid 11083] mouse 9 acquired bowl
+[DEBUG][pid 11069] mouse 2 released mutex
+[DEBUG][pid 11069] mouse 2 waiting for bowl_stack
+[DEBUG][pid 11081] mouse 8 decremented mice_at_bowls=8
+[DEBUG][pid 11073] mouse 4 incremented mice_at_bowls=9
+[DEBUG][pid 11073] mouse 4 released mutex
+[DEBUG][pid 11073] mouse 4 waiting for bowl_stack
+[DEBUG][pid 11081] mouse 8 incremented mice_at_bowls=10
+[DEBUG][pid 11081] mouse 8 released mutex
+[DEBUG][pid 11081] mouse 8 waiting for bowl_stack
+[DEBUG][pid 11075] mouse 5 released bowl
+[DEBUG][pid 11077] mouse 6 released bowl
+[DEBUG][pid 11079] mouse 7 acquired bowl
+[DEBUG][pid 11071] mouse 3 acquired bowl
+[DEBUG][pid 11075] mouse 5 decremented mice_at_bowls=9
+[DEBUG][pid 11065] mouse 0 released bowl
+[DEBUG][pid 11069] mouse 2 acquired bowl
+[DEBUG][pid 11077] mouse 6 decremented mice_at_bowls=8
+[DEBUG][pid 11075] mouse 5 incremented mice_at_bowls=9
+[DEBUG][pid 11075] mouse 5 released mutex
+[DEBUG][pid 11075] mouse 5 waiting for bowl_stack
+[DEBUG][pid 11065] mouse 0 decremented mice_at_bowls=8
+[DEBUG][pid 11077] mouse 6 incremented mice_at_bowls=9
+[DEBUG][pid 11077] mouse 6 released mutex
+[DEBUG][pid 11077] mouse 6 waiting for bowl_stack
+[DEBUG][pid 11065] mouse 0 incremented mice_at_bowls=10
+[DEBUG][pid 11065] mouse 0 released mutex
+[DEBUG][pid 11065] mouse 0 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 released bowl
+[DEBUG][pid 11083] mouse 9 released bowl
+[DEBUG][pid 11067] mouse 1 decremented mice_at_bowls=9
+[DEBUG][pid 11073] mouse 4 acquired bowl
+[DEBUG][pid 11081] mouse 8 acquired bowl
+[DEBUG][pid 11083] mouse 9 decremented mice_at_bowls=8
+[DEBUG][pid 11067] mouse 1 incremented mice_at_bowls=9
+[DEBUG][pid 11067] mouse 1 released mutex
+[DEBUG][pid 11067] mouse 1 waiting for bowl_stack
+[DEBUG][pid 11083] mouse 9 incremented mice_at_bowls=10
+[DEBUG][pid 11083] mouse 9 released mutex
+[DEBUG][pid 11083] mouse 9 waiting for bowl_stack
+[DEBUG][pid 11064] cat 0 trying to lock mutex before entering, cats_waiting=0
+[DEBUG][pid 11070] cat 3 trying to lock mutex before entering, cats_waiting=0
+[DEBUG][pid 11064] cat 0 acquired mutex
+[DEBUG][pid 11064] cat 0 released mutex after entering
+[DEBUG][pid 11064] cat 0 waiting for bowl_stack
+[DEBUG][pid 11070] cat 3 acquired mutex
+[DEBUG][pid 11070] cat 3 released mutex after entering
+[DEBUG][pid 11070] cat 3 waiting for bowl_stack
+[DEBUG][pid 11066] cat 1 trying to lock mutex before entering, cats_waiting=2
+[DEBUG][pid 11066] cat 1 acquired mutex
+[DEBUG][pid 11066] cat 1 released mutex after entering
+[DEBUG][pid 11066] cat 1 waiting for bowl_stack
+[DEBUG][pid 11072] cat 4 trying to lock mutex before entering, cats_waiting=3
+[DEBUG][pid 11072] cat 4 acquired mutex
+[DEBUG][pid 11072] cat 4 released mutex after entering
+[DEBUG][pid 11072] cat 4 waiting for bowl_stack
+[DEBUG][pid 11068] cat 2 trying to lock mutex before entering, cats_waiting=3
+[DEBUG][pid 11068] cat 2 acquired mutex
+[DEBUG][pid 11068] cat 2 released mutex after entering
+[DEBUG][pid 11068] cat 2 waiting for bowl_stack
+[DEBUG][pid 11079] mouse 7 released bowl
+[DEBUG][pid 11071] mouse 3 released bowl
+[DEBUG][pid 11079] mouse 7 decremented mice_at_bowls=9
+[DEBUG][pid 11081] mouse 8 released bowl
+[DEBUG][pid 11075] mouse 5 acquired bowl
+[DEBUG][pid 11069] mouse 2 released bowl
+[DEBUG][pid 11073] mouse 4 released bowl
+[DEBUG][pid 11077] mouse 6 acquired bowl
+[DEBUG][pid 11065] mouse 0 acquired bowl
+[DEBUG][pid 11071] mouse 3 decremented mice_at_bowls=8
+[DEBUG][pid 11067] mouse 1 acquired bowl
+[DEBUG][pid 11083] mouse 9 acquired bowl
+[DEBUG][pid 11081] mouse 8 decremented mice_at_bowls=7
+[DEBUG][pid 11079] mouse 7 queued while cats_waiting=5
+[DEBUG][pid 11069] mouse 2 decremented mice_at_bowls=6
+[DEBUG][pid 11073] mouse 4 decremented mice_at_bowls=5
+[DEBUG][pid 11071] mouse 3 queued while cats_waiting=5
+[DEBUG][pid 11081] mouse 8 queued while cats_waiting=5
+[DEBUG][pid 11069] mouse 2 queued while cats_waiting=5
+[DEBUG][pid 11073] mouse 4 queued while cats_waiting=5
+[DEBUG][pid 11075] mouse 5 released bowl
+[DEBUG][pid 11064] cat 0 acquired bowl
+[DEBUG][pid 11070] cat 3 acquired bowl
+[DEBUG][pid 11075] mouse 5 decremented mice_at_bowls=4
+[DEBUG][pid 11066] cat 1 acquired bowl
+[DEBUG][pid 11075] mouse 5 queued while cats_waiting=5
+[DEBUG][pid 11065] mouse 0 released bowl
+[DEBUG][pid 11083] mouse 9 released bowl
+[DEBUG][pid 11065] mouse 0 decremented mice_at_bowls=3
+[DEBUG][pid 11083] mouse 9 decremented mice_at_bowls=2
+[DEBUG][pid 11065] mouse 0 queued while cats_waiting=5
+[DEBUG][pid 11083] mouse 9 queued while cats_waiting=5
+[DEBUG][pid 11077] mouse 6 released bowl
+[DEBUG][pid 11067] mouse 1 released bowl
+[DEBUG][pid 11077] mouse 6 decremented mice_at_bowls=1
+[DEBUG][pid 11072] cat 4 acquired bowl
+[DEBUG][pid 11068] cat 2 acquired bowl
+[DEBUG][pid 11067] mouse 1 decremented mice_at_bowls=0
+[DEBUG][pid 11077] mouse 6 queued while cats_waiting=5
+[DEBUG][pid 11067] mouse 1 queued while cats_waiting=5
+[DEBUG][pid 11082] cat 9 trying to lock mutex before entering, cats_waiting=5
+[DEBUG][pid 11074] cat 5 trying to lock mutex before entering, cats_waiting=5
+[DEBUG][pid 11080] cat 8 trying to lock mutex before entering, cats_waiting=5
+[DEBUG][pid 11082] cat 9 acquired mutex
+[DEBUG][pid 11082] cat 9 released mutex after entering
+[DEBUG][pid 11082] cat 9 waiting for bowl_stack
+[DEBUG][pid 11076] cat 6 trying to lock mutex before entering, cats_waiting=6
+[DEBUG][pid 11074] cat 5 acquired mutex
+[DEBUG][pid 11078] cat 7 trying to lock mutex before entering, cats_waiting=6
+[DEBUG][pid 11074] cat 5 released mutex after entering
+[DEBUG][pid 11074] cat 5 waiting for bowl_stack
+[DEBUG][pid 11080] cat 8 acquired mutex
+[DEBUG][pid 11080] cat 8 released mutex after entering
+[DEBUG][pid 11080] cat 8 waiting for bowl_stack
+[DEBUG][pid 11076] cat 6 acquired mutex
+[DEBUG][pid 11076] cat 6 released mutex after entering
+[DEBUG][pid 11076] cat 6 waiting for bowl_stack
+[DEBUG][pid 11078] cat 7 acquired mutex
+[DEBUG][pid 11078] cat 7 released mutex after entering
+[DEBUG][pid 11078] cat 7 waiting for bowl_stack
+[DEBUG][pid 11066] cat 1 released bowl
+[DEBUG][pid 11082] cat 9 acquired bowl
+[DEBUG][pid 11066] cat 1 trying to lock mutex before leaving
+[DEBUG][pid 11066] cat 1 acquired mutex to leave
+[DEBUG][pid 11066] cat 1 released mutex after leaving
+[DEBUG][pid 11064] cat 0 released bowl
+[DEBUG][pid 11064] cat 0 trying to lock mutex before leaving
+[DEBUG][pid 11064] cat 0 acquired mutex to leave
+[DEBUG][pid 11064] cat 0 released mutex after leaving
+[DEBUG][pid 11070] cat 3 released bowl
+[DEBUG][pid 11070] cat 3 trying to lock mutex before leaving
+[DEBUG][pid 11072] cat 4 released bowl
+[DEBUG][pid 11070] cat 3 acquired mutex to leave
+[DEBUG][pid 11072] cat 4 trying to lock mutex before leaving
+[DEBUG][pid 11070] cat 3 released mutex after leaving
+[DEBUG][pid 11072] cat 4 acquired mutex to leave
+[DEBUG][pid 11072] cat 4 released mutex after leaving
+[DEBUG][pid 11080] cat 8 acquired bowl
+[DEBUG][pid 11074] cat 5 acquired bowl
+[DEBUG][pid 11076] cat 6 acquired bowl
+[DEBUG][pid 11068] cat 2 released bowl
+[DEBUG][pid 11068] cat 2 trying to lock mutex before leaving
+[DEBUG][pid 11068] cat 2 acquired mutex to leave
+[DEBUG][pid 11078] cat 7 acquired bowl
+[DEBUG][pid 11068] cat 2 released mutex after leaving
+[DEBUG][pid 11074] cat 5 released bowl
+[DEBUG][pid 11082] cat 9 released bowl
+[DEBUG][pid 11078] cat 7 released bowl
+[DEBUG][pid 11074] cat 5 trying to lock mutex before leaving
+[DEBUG][pid 11082] cat 9 trying to lock mutex before leaving
+[DEBUG][pid 11078] cat 7 trying to lock mutex before leaving
+[DEBUG][pid 11080] cat 8 released bowl
+[DEBUG][pid 11074] cat 5 acquired mutex to leave
+[DEBUG][pid 11080] cat 8 trying to lock mutex before leaving
+[DEBUG][pid 11074] cat 5 released mutex after leaving
+[DEBUG][pid 11076] cat 6 released bowl
+[DEBUG][pid 11076] cat 6 trying to lock mutex before leaving
+[DEBUG][pid 11082] cat 9 acquired mutex to leave
+[DEBUG][pid 11082] cat 9 released mutex after leaving
+[DEBUG][pid 11078] cat 7 acquired mutex to leave
+[DEBUG][pid 11078] cat 7 released mutex after leaving
+[DEBUG][pid 11080] cat 8 acquired mutex to leave
+[DEBUG][pid 11080] cat 8 released mutex after leaving
+[DEBUG][pid 11076] cat 6 acquired mutex to leave
+[DEBUG][pid 11076] cat 6 is the last cat leaving, broadcasting to 10 waiting mice
+[DEBUG][pid 11079] mouse 7 awakened by broadcast
+[DEBUG][pid 11071] mouse 3 awakened by broadcast
+[DEBUG][pid 11081] mouse 8 awakened by broadcast
+[DEBUG][pid 11076] cat 6 released mutex after leaving
+[DEBUG][pid 11069] mouse 2 awakened by broadcast
+[DEBUG][pid 11073] mouse 4 awakened by broadcast
+[DEBUG][pid 11075] mouse 5 awakened by broadcast
+[DEBUG][pid 11065] mouse 0 awakened by broadcast
+[DEBUG][pid 11083] mouse 9 awakened by broadcast
+[DEBUG][pid 11077] mouse 6 awakened by broadcast
+[DEBUG][pid 11067] mouse 1 awakened by broadcast
+[DEBUG][pid 11079] mouse 7 incremented mice_at_bowls=1
+[DEBUG][pid 11079] mouse 7 released mutex
+[DEBUG][pid 11079] mouse 7 waiting for bowl_stack
+[DEBUG][pid 11079] mouse 7 acquired bowl
+[DEBUG][pid 11071] mouse 3 incremented mice_at_bowls=2
+[DEBUG][pid 11071] mouse 3 released mutex
+[DEBUG][pid 11081] mouse 8 incremented mice_at_bowls=3
+[DEBUG][pid 11071] mouse 3 waiting for bowl_stack
+[DEBUG][pid 11071] mouse 3 acquired bowl
+[DEBUG][pid 11081] mouse 8 released mutex
+[DEBUG][pid 11081] mouse 8 waiting for bowl_stack
+[DEBUG][pid 11081] mouse 8 acquired bowl
+[DEBUG][pid 11069] mouse 2 incremented mice_at_bowls=4
+[DEBUG][pid 11069] mouse 2 released mutex
+[DEBUG][pid 11069] mouse 2 waiting for bowl_stack
+[DEBUG][pid 11069] mouse 2 acquired bowl
+[DEBUG][pid 11073] mouse 4 incremented mice_at_bowls=5
+[DEBUG][pid 11073] mouse 4 released mutex
+[DEBUG][pid 11073] mouse 4 waiting for bowl_stack
+[DEBUG][pid 11073] mouse 4 acquired bowl
+[DEBUG][pid 11075] mouse 5 incremented mice_at_bowls=6
+[DEBUG][pid 11075] mouse 5 released mutex
+[DEBUG][pid 11075] mouse 5 waiting for bowl_stack
+[DEBUG][pid 11065] mouse 0 incremented mice_at_bowls=7
+[DEBUG][pid 11065] mouse 0 released mutex
+[DEBUG][pid 11065] mouse 0 waiting for bowl_stack
+[DEBUG][pid 11083] mouse 9 incremented mice_at_bowls=8
+[DEBUG][pid 11083] mouse 9 released mutex
+[DEBUG][pid 11083] mouse 9 waiting for bowl_stack
+[DEBUG][pid 11077] mouse 6 incremented mice_at_bowls=9
+[DEBUG][pid 11077] mouse 6 released mutex
+[DEBUG][pid 11077] mouse 6 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 incremented mice_at_bowls=10
+[DEBUG][pid 11067] mouse 1 released mutex
+[DEBUG][pid 11067] mouse 1 waiting for bowl_stack
+[DEBUG][pid 11079] mouse 7 released bowl
+[DEBUG][pid 11075] mouse 5 acquired bowl
+[DEBUG][pid 11079] mouse 7 decremented mice_at_bowls=9
+[DEBUG][pid 11079] mouse 7 incremented mice_at_bowls=10
+[DEBUG][pid 11079] mouse 7 released mutex
+[DEBUG][pid 11079] mouse 7 waiting for bowl_stack
+[DEBUG][pid 11071] mouse 3 released bowl
+[DEBUG][pid 11071] mouse 3 decremented mice_at_bowls=9
+[DEBUG][pid 11071] mouse 3 incremented mice_at_bowls=10
+[DEBUG][pid 11071] mouse 3 released mutex
+[DEBUG][pid 11071] mouse 3 waiting for bowl_stack
+[DEBUG][pid 11065] mouse 0 acquired bowl
+[DEBUG][pid 11081] mouse 8 released bowl
+[DEBUG][pid 11081] mouse 8 decremented mice_at_bowls=9
+[DEBUG][pid 11081] mouse 8 incremented mice_at_bowls=10
+[DEBUG][pid 11081] mouse 8 released mutex
+[DEBUG][pid 11081] mouse 8 waiting for bowl_stack
+[DEBUG][pid 11069] mouse 2 released bowl
+[DEBUG][pid 11073] mouse 4 released bowl
+[DEBUG][pid 11083] mouse 9 acquired bowl
+[DEBUG][pid 11069] mouse 2 decremented mice_at_bowls=9
+[DEBUG][pid 11077] mouse 6 acquired bowl
+[DEBUG][pid 11073] mouse 4 decremented mice_at_bowls=8
+[DEBUG][pid 11067] mouse 1 acquired bowl
+[DEBUG][pid 11069] mouse 2 incremented mice_at_bowls=9
+[DEBUG][pid 11069] mouse 2 released mutex
+[DEBUG][pid 11069] mouse 2 waiting for bowl_stack
+[DEBUG][pid 11073] mouse 4 incremented mice_at_bowls=10
+[DEBUG][pid 11073] mouse 4 released mutex
+[DEBUG][pid 11073] mouse 4 waiting for bowl_stack
+[DEBUG][pid 11075] mouse 5 released bowl
+[DEBUG][pid 11079] mouse 7 acquired bowl
+[DEBUG][pid 11075] mouse 5 decremented mice_at_bowls=9
+[DEBUG][pid 11075] mouse 5 incremented mice_at_bowls=10
+[DEBUG][pid 11075] mouse 5 released mutex
+[DEBUG][pid 11075] mouse 5 waiting for bowl_stack
+[DEBUG][pid 11065] mouse 0 released bowl
+[DEBUG][pid 11067] mouse 1 released bowl
+[DEBUG][pid 11065] mouse 0 decremented mice_at_bowls=9
+[DEBUG][pid 11067] mouse 1 decremented mice_at_bowls=8
+[DEBUG][pid 11071] mouse 3 acquired bowl
+[DEBUG][pid 11081] mouse 8 acquired bowl
+[DEBUG][pid 11065] mouse 0 incremented mice_at_bowls=9
+[DEBUG][pid 11065] mouse 0 released mutex
+[DEBUG][pid 11065] mouse 0 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 incremented mice_at_bowls=10
+[DEBUG][pid 11067] mouse 1 released mutex
+[DEBUG][pid 11067] mouse 1 waiting for bowl_stack
+[DEBUG][pid 11083] mouse 9 released bowl
+[DEBUG][pid 11083] mouse 9 decremented mice_at_bowls=9
+[DEBUG][pid 11083] mouse 9 incremented mice_at_bowls=10
+[DEBUG][pid 11083] mouse 9 released mutex
+[DEBUG][pid 11083] mouse 9 waiting for bowl_stack
+[DEBUG][pid 11077] mouse 6 released bowl
+[DEBUG][pid 11077] mouse 6 decremented mice_at_bowls=9
+[DEBUG][pid 11077] mouse 6 incremented mice_at_bowls=10
+[DEBUG][pid 11077] mouse 6 released mutex
+[DEBUG][pid 11069] mouse 2 acquired bowl
+[DEBUG][pid 11077] mouse 6 waiting for bowl_stack
+[DEBUG][pid 11073] mouse 4 acquired bowl
+[DEBUG][pid 11071] mouse 3 released bowl
+[DEBUG][pid 11073] mouse 4 released bowl
+[DEBUG][pid 11065] mouse 0 acquired bowl
+[DEBUG][pid 11075] mouse 5 acquired bowl
+[DEBUG][pid 11071] mouse 3 decremented mice_at_bowls=9
+[DEBUG][pid 11073] mouse 4 decremented mice_at_bowls=8
+[DEBUG][pid 11071] mouse 3 incremented mice_at_bowls=9
+[DEBUG][pid 11071] mouse 3 released mutex
+[DEBUG][pid 11071] mouse 3 waiting for bowl_stack
+[DEBUG][pid 11073] mouse 4 incremented mice_at_bowls=10
+[DEBUG][pid 11073] mouse 4 released mutex
+[DEBUG][pid 11073] mouse 4 waiting for bowl_stack
+[DEBUG][pid 11079] mouse 7 released bowl
+[DEBUG][pid 11079] mouse 7 decremented mice_at_bowls=9
+[DEBUG][pid 11079] mouse 7 incremented mice_at_bowls=10
+[DEBUG][pid 11067] mouse 1 acquired bowl
+[DEBUG][pid 11079] mouse 7 released mutex
+[DEBUG][pid 11079] mouse 7 waiting for bowl_stack
+[DEBUG][pid 11081] mouse 8 released bowl
+[DEBUG][pid 11081] mouse 8 decremented mice_at_bowls=9
+[DEBUG][pid 11081] mouse 8 incremented mice_at_bowls=10
+[DEBUG][pid 11081] mouse 8 released mutex
+[DEBUG][pid 11081] mouse 8 waiting for bowl_stack
+[DEBUG][pid 11083] mouse 9 acquired bowl
+[DEBUG][pid 11069] mouse 2 released bowl
+[DEBUG][pid 11069] mouse 2 decremented mice_at_bowls=9
+[DEBUG][pid 11069] mouse 2 incremented mice_at_bowls=10
+[DEBUG][pid 11069] mouse 2 released mutex
+[DEBUG][pid 11069] mouse 2 waiting for bowl_stack
+[DEBUG][pid 11077] mouse 6 acquired bowl
+[DEBUG][pid 11075] mouse 5 released bowl
+[DEBUG][pid 11071] mouse 3 acquired bowl
+[DEBUG][pid 11073] mouse 4 acquired bowl
+[DEBUG][pid 11075] mouse 5 decremented mice_at_bowls=9
+[DEBUG][pid 11079] mouse 7 acquired bowl
+[DEBUG][pid 11075] mouse 5 incremented mice_at_bowls=10
+[DEBUG][pid 11075] mouse 5 released mutex
+[DEBUG][pid 11075] mouse 5 waiting for bowl_stack
+[DEBUG][pid 11065] mouse 0 released bowl
+[DEBUG][pid 11077] mouse 6 released bowl
+[DEBUG][pid 11065] mouse 0 decremented mice_at_bowls=9
+[DEBUG][pid 11077] mouse 6 decremented mice_at_bowls=8
+[DEBUG][pid 11065] mouse 0 incremented mice_at_bowls=9
+[DEBUG][pid 11065] mouse 0 released mutex
+[DEBUG][pid 11065] mouse 0 waiting for bowl_stack
+[DEBUG][pid 11077] mouse 6 incremented mice_at_bowls=10
+[DEBUG][pid 11077] mouse 6 released mutex
+[DEBUG][pid 11077] mouse 6 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 released bowl
+[DEBUG][pid 11067] mouse 1 decremented mice_at_bowls=9
+[DEBUG][pid 11067] mouse 1 incremented mice_at_bowls=10
+[DEBUG][pid 11081] mouse 8 acquired bowl
+[DEBUG][pid 11067] mouse 1 released mutex
+[DEBUG][pid 11067] mouse 1 waiting for bowl_stack
+[DEBUG][pid 11083] mouse 9 released bowl
+[DEBUG][pid 11083] mouse 9 decremented mice_at_bowls=9
+[DEBUG][pid 11083] mouse 9 incremented mice_at_bowls=10
+[DEBUG][pid 11083] mouse 9 released mutex
+[DEBUG][pid 11083] mouse 9 waiting for bowl_stack
+[DEBUG][pid 11069] mouse 2 acquired bowl
+[DEBUG][pid 11069] mouse 2 released bowl
+[DEBUG][pid 11075] mouse 5 acquired bowl
+[DEBUG][pid 11069] mouse 2 decremented mice_at_bowls=9
+[DEBUG][pid 11069] mouse 2 incremented mice_at_bowls=10
+[DEBUG][pid 11069] mouse 2 released mutex
+[DEBUG][pid 11069] mouse 2 waiting for bowl_stack
+[DEBUG][pid 11071] mouse 3 released bowl
+[DEBUG][pid 11073] mouse 4 released bowl
+[DEBUG][pid 11071] mouse 3 decremented mice_at_bowls=9
+[DEBUG][pid 11079] mouse 7 released bowl
+[DEBUG][pid 11081] mouse 8 released bowl
+[DEBUG][pid 11065] mouse 0 acquired bowl
+[DEBUG][pid 11077] mouse 6 acquired bowl
+[DEBUG][pid 11067] mouse 1 acquired bowl
+[DEBUG][pid 11073] mouse 4 decremented mice_at_bowls=8
+[DEBUG][pid 11083] mouse 9 acquired bowl
+[DEBUG][pid 11071] mouse 3 incremented mice_at_bowls=9
+[DEBUG][pid 11071] mouse 3 released mutex
+[DEBUG][pid 11071] mouse 3 waiting for bowl_stack
+[DEBUG][pid 11079] mouse 7 decremented mice_at_bowls=8
+[DEBUG][pid 11081] mouse 8 decremented mice_at_bowls=7
+[DEBUG][pid 11073] mouse 4 incremented mice_at_bowls=8
+[DEBUG][pid 11073] mouse 4 released mutex
+[DEBUG][pid 11073] mouse 4 waiting for bowl_stack
+[DEBUG][pid 11079] mouse 7 incremented mice_at_bowls=9
+[DEBUG][pid 11079] mouse 7 released mutex
+[DEBUG][pid 11079] mouse 7 waiting for bowl_stack
+[DEBUG][pid 11081] mouse 8 incremented mice_at_bowls=10
+[DEBUG][pid 11081] mouse 8 released mutex
+[DEBUG][pid 11081] mouse 8 waiting for bowl_stack
+[DEBUG][pid 11083] mouse 9 released bowl
+[DEBUG][pid 11075] mouse 5 released bowl
+[DEBUG][pid 11069] mouse 2 acquired bowl
+[DEBUG][pid 11071] mouse 3 acquired bowl
+[DEBUG][pid 11083] mouse 9 decremented mice_at_bowls=9
+[DEBUG][pid 11077] mouse 6 released bowl
+[DEBUG][pid 11073] mouse 4 acquired bowl
+[DEBUG][pid 11075] mouse 5 decremented mice_at_bowls=8
+[DEBUG][pid 11083] mouse 9 incremented mice_at_bowls=9
+[DEBUG][pid 11083] mouse 9 released mutex
+[DEBUG][pid 11083] mouse 9 waiting for bowl_stack
+[DEBUG][pid 11077] mouse 6 decremented mice_at_bowls=8
+[DEBUG][pid 11075] mouse 5 incremented mice_at_bowls=9
+[DEBUG][pid 11075] mouse 5 released mutex
+[DEBUG][pid 11075] mouse 5 waiting for bowl_stack
+[DEBUG][pid 11077] mouse 6 incremented mice_at_bowls=10
+[DEBUG][pid 11077] mouse 6 released mutex
+[DEBUG][pid 11077] mouse 6 waiting for bowl_stack
+[DEBUG][pid 11065] mouse 0 released bowl
+[DEBUG][pid 11065] mouse 0 decremented mice_at_bowls=9
+[DEBUG][pid 11065] mouse 0 incremented mice_at_bowls=10
+[DEBUG][pid 11079] mouse 7 acquired bowl
+[DEBUG][pid 11065] mouse 0 released mutex
+[DEBUG][pid 11065] mouse 0 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 released bowl
+[DEBUG][pid 11067] mouse 1 decremented mice_at_bowls=9
+[DEBUG][pid 11067] mouse 1 incremented mice_at_bowls=10
+[DEBUG][pid 11081] mouse 8 acquired bowl
+[DEBUG][pid 11067] mouse 1 released mutex
+[DEBUG][pid 11067] mouse 1 waiting for bowl_stack
+[DEBUG][pid 11069] mouse 2 released bowl
+[DEBUG][pid 11079] mouse 7 released bowl
+[DEBUG][pid 11069] mouse 2 decremented mice_at_bowls=9
+[DEBUG][pid 11073] mouse 4 released bowl
+[DEBUG][pid 11083] mouse 9 acquired bowl
+[DEBUG][pid 11075] mouse 5 acquired bowl
+[DEBUG][pid 11077] mouse 6 acquired bowl
+[DEBUG][pid 11071] mouse 3 released bowl
+[DEBUG][pid 11079] mouse 7 decremented mice_at_bowls=8
+[DEBUG][pid 11069] mouse 2 incremented mice_at_bowls=9
+[DEBUG][pid 11065] mouse 0 acquired bowl
+[DEBUG][pid 11069] mouse 2 released mutex
+[DEBUG][pid 11069] mouse 2 waiting for bowl_stack
+[DEBUG][pid 11073] mouse 4 decremented mice_at_bowls=8
+[DEBUG][pid 11071] mouse 3 decremented mice_at_bowls=7
+[DEBUG][pid 11079] mouse 7 incremented mice_at_bowls=8
+[DEBUG][pid 11079] mouse 7 released mutex
+[DEBUG][pid 11079] mouse 7 waiting for bowl_stack
+[DEBUG][pid 11073] mouse 4 incremented mice_at_bowls=9
+[DEBUG][pid 11073] mouse 4 released mutex
+[DEBUG][pid 11073] mouse 4 waiting for bowl_stack
+[DEBUG][pid 11071] mouse 3 incremented mice_at_bowls=10
+[DEBUG][pid 11071] mouse 3 released mutex
+[DEBUG][pid 11071] mouse 3 waiting for bowl_stack
+[DEBUG][pid 11081] mouse 8 released bowl
+[DEBUG][pid 11081] mouse 8 decremented mice_at_bowls=9
+[DEBUG][pid 11081] mouse 8 incremented mice_at_bowls=10
+[DEBUG][pid 11081] mouse 8 released mutex
+[DEBUG][pid 11081] mouse 8 waiting for bowl_stack
+[DEBUG][pid 11067] mouse 1 acquired bowl
+[DEBUG][pid 11064] cat 0 trying to lock mutex before entering, cats_waiting=0
+[DEBUG][pid 11064] cat 0 acquired mutex
+[DEBUG][pid 11064] cat 0 released mutex after entering
+[DEBUG][pid 11064] cat 0 waiting for bowl_stack
+[DEBUG][pid 11070] cat 3 trying to lock mutex before entering, cats_waiting=1
+[DEBUG][pid 11070] cat 3 acquired mutex
+[DEBUG][pid 11070] cat 3 released mutex after entering
+[DEBUG][pid 11070] cat 3 waiting for bowl_stack
+[DEBUG][pid 11066] cat 1 trying to lock mutex before entering, cats_waiting=2
+[DEBUG][pid 11072] cat 4 trying to lock mutex before entering, cats_waiting=2
+[DEBUG][pid 11066] cat 1 acquired mutex
+[DEBUG][pid 11066] cat 1 released mutex after entering
+[DEBUG][pid 11066] cat 1 waiting for bowl_stack
+[DEBUG][pid 11072] cat 4 acquired mutex
+[DEBUG][pid 11072] cat 4 released mutex after entering
+[DEBUG][pid 11072] cat 4 waiting for bowl_stack
+[DEBUG][pid 11068] cat 2 trying to lock mutex before entering, cats_waiting=4
+[DEBUG][pid 11068] cat 2 acquired mutex
+[DEBUG][pid 11068] cat 2 released mutex after entering
+[DEBUG][pid 11068] cat 2 waiting for bowl_stack
+[DEBUG][pid 11083] mouse 9 released bowl
+[DEBUG][pid 11065] mouse 0 released bowl
+[DEBUG][pid 11083] mouse 9 decremented mice_at_bowls=9
+[DEBUG][pid 11069] mouse 2 acquired bowl
+[DEBUG][pid 11065] mouse 0 decremented mice_at_bowls=8
+[DEBUG][pid 11079] mouse 7 acquired bowl
+[DEBUG][pid 11083] mouse 9 queued while cats_waiting=5
+[DEBUG][pid 11065] mouse 0 queued while cats_waiting=5
+[DEBUG][pid 11075] mouse 5 released bowl
+[DEBUG][pid 11075] mouse 5 decremented mice_at_bowls=7
+[DEBUG][pid 11073] mouse 4 acquired bowl
+[DEBUG][pid 11075] mouse 5 queued while cats_waiting=5
+[DEBUG][pid 11077] mouse 6 released bowl
+[DEBUG][pid 11077] mouse 6 decremented mice_at_bowls=6
+[DEBUG][pid 11077] mouse 6 queued while cats_waiting=5
+[DEBUG][pid 11071] mouse 3 acquired bowl
+[DEBUG][pid 11067] mouse 1 released bowl
+[DEBUG][pid 11067] mouse 1 decremented mice_at_bowls=5
+[DEBUG][pid 11081] mouse 8 acquired bowl
+[DEBUG][pid 11067] mouse 1 queued while cats_waiting=5
+[DEBUG][pid 11069] mouse 2 released bowl
+[DEBUG][pid 11064] cat 0 acquired bowl
+[DEBUG][pid 11070] cat 3 acquired bowl
+[DEBUG][pid 11069] mouse 2 decremented mice_at_bowls=4
+[DEBUG][pid 11069] mouse 2 queued while cats_waiting=5
+[DEBUG][pid 11079] mouse 7 released bowl
+[DEBUG][pid 11079] mouse 7 decremented mice_at_bowls=3
+[DEBUG][pid 11079] mouse 7 queued while cats_waiting=5
+[DEBUG][pid 11073] mouse 4 released bowl
+[DEBUG][pid 11073] mouse 4 decremented mice_at_bowls=2
+[DEBUG][pid 11066] cat 1 acquired bowl
+[DEBUG][pid 11073] mouse 4 queued while cats_waiting=5
+[DEBUG][pid 11071] mouse 3 released bowl
+[DEBUG][pid 11081] mouse 8 released bowl
+[DEBUG][pid 11071] mouse 3 decremented mice_at_bowls=1
+[DEBUG][pid 11072] cat 4 acquired bowl
+[DEBUG][pid 11068] cat 2 acquired bowl
+[DEBUG][pid 11081] mouse 8 decremented mice_at_bowls=0
+[DEBUG][pid 11071] mouse 3 queued while cats_waiting=5
+[DEBUG][pid 11081] mouse 8 queued while cats_waiting=5
+[DEBUG][pid 11074] cat 5 trying to lock mutex before entering, cats_waiting=5
+[DEBUG][pid 11078] cat 7 trying to lock mutex before entering, cats_waiting=5
+[DEBUG][pid 11074] cat 5 acquired mutex
+[DEBUG][pid 11074] cat 5 released mutex after entering
+[DEBUG][pid 11074] cat 5 waiting for bowl_stack
+[DEBUG][pid 11082] cat 9 trying to lock mutex before entering, cats_waiting=6
+[DEBUG][pid 11078] cat 7 acquired mutex
+[DEBUG][pid 11078] cat 7 released mutex after entering
+[DEBUG][pid 11078] cat 7 waiting for bowl_stack
+[DEBUG][pid 11082] cat 9 acquired mutex
+[DEBUG][pid 11082] cat 9 released mutex after entering
+[DEBUG][pid 11082] cat 9 waiting for bowl_stack
+[DEBUG][pid 11076] cat 6 trying to lock mutex before entering, cats_waiting=8
+[DEBUG][pid 11076] cat 6 acquired mutex
+[DEBUG][pid 11076] cat 6 released mutex after entering
+[DEBUG][pid 11076] cat 6 waiting for bowl_stack
+[DEBUG][pid 11080] cat 8 trying to lock mutex before entering, cats_waiting=9
+[DEBUG][pid 11080] cat 8 acquired mutex
+[DEBUG][pid 11080] cat 8 released mutex after entering
+[DEBUG][pid 11080] cat 8 waiting for bowl_stack
+[DEBUG][pid 11064] cat 0 released bowl
+[DEBUG][pid 11070] cat 3 released bowl
+[DEBUG][pid 11074] cat 5 acquired bowl
+[DEBUG][pid 11078] cat 7 acquired bowl
+[DEBUG][pid 11070] cat 3 trying to lock mutex before leaving
+[DEBUG][pid 11070] cat 3 acquired mutex to leave
+[DEBUG][pid 11070] cat 3 released mutex after leaving
+[DEBUG][pid 11064] cat 0 trying to lock mutex before leaving
+[DEBUG][pid 11064] cat 0 acquired mutex to leave
+[DEBUG][pid 11064] cat 0 released mutex after leaving
+[DEBUG][pid 11066] cat 1 released bowl
+[DEBUG][pid 11072] cat 4 released bowl
+[DEBUG][pid 11066] cat 1 trying to lock mutex before leaving
+[DEBUG][pid 11072] cat 4 trying to lock mutex before leaving
+[DEBUG][pid 11082] cat 9 acquired bowl
+[DEBUG][pid 11066] cat 1 acquired mutex to leave
+[DEBUG][pid 11076] cat 6 acquired bowl
+[DEBUG][pid 11066] cat 1 released mutex after leaving
+[DEBUG][pid 11072] cat 4 acquired mutex to leave
+[DEBUG][pid 11072] cat 4 released mutex after leaving
+[DEBUG][pid 11068] cat 2 released bowl
+[DEBUG][pid 11068] cat 2 trying to lock mutex before leaving
+[DEBUG][pid 11068] cat 2 acquired mutex to leave
+[DEBUG][pid 11068] cat 2 released mutex after leaving
+[DEBUG][pid 11080] cat 8 acquired bowl
+[MAIN] stopping child processes

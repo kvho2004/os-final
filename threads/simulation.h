@@ -4,7 +4,7 @@
 #include <pthread.h>
 #include <semaphore.h>
 
-/* ── Configuration ─────────────────────────────────────────────────────────── */
+// Configuration
 typedef struct {
     int numBowls;
     int numCats;
@@ -13,26 +13,24 @@ typedef struct {
     int catFull;
 } Config;
 
-/* ── Shared simulation state ────────────────────────────────────────────────── */
+// Shared simulation state
 typedef struct {
     Config cfg;
 
-    /* Bowl semaphores – one pool for cats, one for mice.
-       Both initialised to cfg.numBowls so at most B of each can feed at once.
-       Named semaphores used for macOS compatibility.                          */
+    // Bowl semaphores initialised so at most B of each can feed at once.
     sem_t *cat_bowls;
     sem_t *mouse_bowls;
 
-    /* Active-cat counter and its guard.
-       The condition variable lets mice block efficiently until active_cats == 0
-       and lets an arriving cat broadcast a "flee" signal to feeding mice.    */
+    // Active-cat counter and its guard. 
+    // The condition variable lets mice block until active_cats == 0 and 
+    // lets an arriving cat send a flee signal to feeding mice
     int             active_cats;
     pthread_mutex_t cat_count_mutex;
-    pthread_cond_t  no_cats;        /* signalled when active_cats drops to 0  */
-    pthread_cond_t  cats_present;   /* signalled when active_cats rises to 1  */
+    pthread_cond_t  no_cats;        // signalled when active_cats drops to 0 
+    pthread_cond_t  cats_present;   // signalled when active_cats rises to 1 
 } SimState;
 
-/* ── Thread argument bundles ────────────────────────────────────────────────── */
+// Thread argument bundles 
 typedef struct {
     int       id;
     SimState *state;
@@ -43,15 +41,15 @@ typedef struct {
     SimState *state;
 } MouseArgs;
 
-/* ── Function declarations ──────────────────────────────────────────────────── */
+// Function declarations
 
-/* cat.c */
+// cat.c 
 void *cat_thread(void *arg);
 
-/* mouse.c */
+// mouse.c
 void *mouse_thread(void *arg);
 
-/* Utility – thread-safe timestamped log line */
+// Utility – thread-safe timestamped log line 
 void sim_log(const char *fmt, ...);
 
 #endif /* SIMULATION_H */

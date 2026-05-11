@@ -18,9 +18,10 @@ typedef struct {
     Config cfg;
 
     /* Bowl semaphores – one pool for cats, one for mice.
-       Both initialised to cfg.B so at most B of each can feed at once. */
-    sem_t cat_bowls;
-    sem_t mouse_bowls;
+       Both initialised to cfg.numBowls so at most B of each can feed at once.
+       Named semaphores used for macOS compatibility.                          */
+    sem_t *cat_bowls;
+    sem_t *mouse_bowls;
 
     /* Active-cat counter and its guard.
        The condition variable lets mice block efficiently until active_cats == 0

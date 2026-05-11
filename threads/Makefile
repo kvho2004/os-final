@@ -21,3 +21,18 @@ run-many-mice:
 
 run-tight:
 	./$(TARGET) -B 1 -C 2 -M 4 -F 100 -N 100
+
+# bottleneck: single bowl, cats queue up
+# plenty of bowls, no bowl contention
+run-num-bowls:
+	./$(TARGET) -B 1 -C 3 -M 5 -F 300 -N 500   
+	./$(TARGET) -B 5 -C 3 -M 5 -F 300 -N 500   
+
+# single cat, mice get long windows
+# many cats, mice rarely get a window
+run-num-cats:
+	./$(TARGET) -B 2 -C 1 -M 5 -F 300 -N 500   
+	./$(TARGET) -B 2 -C 8 -M 5 -F 300 -N 500   
+
+run-
+	

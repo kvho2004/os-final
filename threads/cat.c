@@ -29,7 +29,7 @@ void *cat_thread(void *arg)
 
         /* ── 2. Hungry – wait for a free bowl ──────────────────────────── */
         sim_log("Cat %d: hungry, waiting for a bowl", id);
-        sem_wait(&state->cat_bowls);
+        sem_wait(state->cat_bowls);
 
         /* ── 3. Arrive at bowl – update active cat count ────────────────── */
         pthread_mutex_lock(&state->cat_count_mutex);
@@ -55,7 +55,7 @@ void *cat_thread(void *arg)
         }
         pthread_mutex_unlock(&state->cat_count_mutex);
 
-        sem_post(&state->cat_bowls);
+        sem_post(state->cat_bowls);
     }
 
     return NULL;

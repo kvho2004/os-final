@@ -3,6 +3,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include <unistd.h>
+#include <fcntl.h>
 #include <pthread.h>
 #include <semaphore.h>
 #include <time.h>
@@ -75,8 +76,15 @@ int main(int argc, char *argv[])
     state.cfg         = cfg;
     state.active_cats = 0;
 
-    sem_init(&state.cat_bowls,   0, cfg.numBowls);
-    sem_init(&state.mouse_bowls, 0, cfg.numBowls);
+    /* Named semaphores – required on macOS (sem_init is deprecated) */
+    sem_unlink("/cat_bowls");
+    sem_unlink("/mouse_bowls");
+    state.cat_bowls   = sem_open("/cat_bowls",   O_CREAT, 0644, cfg.numBowls);
+    state.mouse_bowls = sem_open("/mouse_bowls", O_CREAT, 0644, cfg.numBowls);
+    if (state.cat_bowls == SEM_FAILED || state.mouse_bowls == SEM_FAILED) {
+        perror("sem_open");
+        exit(EXIT_FAILURE);
+    }
     pthread_mutex_init(&state.cat_count_mutex, NULL);
     pthread_cond_init(&state.no_cats,      NULL);
     pthread_cond_init(&state.cats_present, NULL);
@@ -110,8 +118,10 @@ int main(int argc, char *argv[])
     for (int i = 0; i < cfg.numMice; i++) pthread_join(mouse_threads[i], NULL);
 
     /* ── Cleanup ────────────────────────────────────────────────────────── */
-    sem_destroy(&state.cat_bowls);
-    sem_destroy(&state.mouse_bowls);
+    sem_close(state.cat_bowls);
+    sem_close(state.mouse_bowls);
+    sem_unlink("/cat_bowls");
+    sem_unlink("/mouse_bowls");
     pthread_mutex_destroy(&state.cat_count_mutex);
     pthread_cond_destroy(&state.no_cats);
     pthread_cond_destroy(&state.cats_present);

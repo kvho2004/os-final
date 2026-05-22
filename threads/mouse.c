@@ -23,17 +23,16 @@ void *mouse_thread(void *arg)
     SimState  *state = a->state;
     int        id    = a->id;
 
-    /* How long each "feeding burst" lasts before rechecking for cats (ms).
-       Smaller = more responsive to cat arrival; larger = less CPU overhead.  */
+    // Setting length of feeding burst before rechecking for cats
     const int BURST_MS = 50;
 
     while (1) {
-        /* ── 1. Not hungry ──────────────────────────────────────────────── */
-        int rest = 100 + rand() % 400;   /* 100–500 ms */
+        // Not hungry
+        int rest = 100 + rand() % 400; 
         sim_log("Mouse %d: not hungry, resting %d ms", id, rest);
         usleep(rest * 1000);
 
-        /* ── 2. Wait until no cats are feeding ─────────────────────────── */
+        // Wait until no cats
         pthread_mutex_lock(&state->cat_count_mutex);
         while (state->active_cats > 0) {
             sim_log("Mouse %d: cats present, waiting...", id);
@@ -41,14 +40,11 @@ void *mouse_thread(void *arg)
         }
         pthread_mutex_unlock(&state->cat_count_mutex);
 
-        /* ── 3. Wait for a free bowl ────────────────────────────────────── */
+        // Wait for open bowl
         sim_log("Mouse %d: no cats, waiting for a bowl", id);
         sem_wait(state->mouse_bowls);
 
-        /*
-         * Re-check: a cat may have arrived between steps 2 and 3.
-         * If so, give up the bowl immediately and go back to waiting.
-         */
+        // Recheck if cat has arrived
         pthread_mutex_lock(&state->cat_count_mutex);
         if (state->active_cats > 0) {
             pthread_mutex_unlock(&state->cat_count_mutex);
@@ -60,30 +56,22 @@ void *mouse_thread(void *arg)
 
         sim_log("Mouse %d: START feeding", id);
 
-        /* ── 4. Feed in short bursts, fleeing if a cat arrives ──────────── */
+        // Feed in small increments + leave if a cat arrives
         int fled = 0;
         while (!fled) {
-            /* Sleep one burst */
+            // Sleep for one burst
             usleep(BURST_MS * 1000);
 
-            /* Check whether a cat has arrived */
+            // Check for cat
             pthread_mutex_lock(&state->cat_count_mutex);
             if (state->active_cats > 0) {
                 fled = 1;
                 sim_log("Mouse %d: cat arrived – FLEEING", id);
             }
             pthread_mutex_unlock(&state->cat_count_mutex);
-
-            /*
-             * Optional: break out after a random total feeding time even
-             * without a cat, so mice don't feed forever when no cats come.
-             * Uncomment and adjust as needed:
-             *
-             * if (!fled && (rand() % 10 == 0)) break;
-             */
         }
 
-        /* ── 5. Release bowl ────────────────────────────────────────────── */
+        // Free bowl
         if (!fled) {
             sim_log("Mouse %d: STOP feeding (finished normally)", id);
         }

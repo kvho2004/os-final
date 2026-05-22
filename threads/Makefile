@@ -34,5 +34,22 @@ run-num-cats:
 	./$(TARGET) -B 2 -C 1 -M 5 -F 300 -N 500   
 	./$(TARGET) -B 2 -C 8 -M 5 -F 300 -N 500   
 
-run-
+# single mouse, easy case
+# many mice competing for 2 bowls
+run-num-mice:
+	./$(TARGET) -B 2 -C 3 -M 1 -F 300 -N 500   
+	./$(TARGET) -B 2 -C 3 -M 10 -F 300 -N 500  
+
+# cats barely rest, mice almost never feed
+# cats rest long, mice get big windows
+run-cat-feed-duration:
+	./$(TARGET) -B 2 -C 3 -M 5 -F 300 -N 100   
+	./$(TARGET) -B 2 -C 3 -M 5 -F 300 -N 2000  
+
+# cats barely rest, mice almost never feed
+# cats rest long, mice get big windows
+run-cat-not-hungry:
+	./$(TARGET) -B 2 -C 3 -M 5 -F 300 -N 100 
+	./$(TARGET) -B 2 -C 3 -M 5 -F 300 -N 2000
+
 	

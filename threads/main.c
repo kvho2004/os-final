@@ -9,7 +9,7 @@
 #include <time.h>
 #include "simulation.h"
 
-/* ── Logging ────────────────────────────────────────────────────────────────── */
+// Logging
 
 static pthread_mutex_t log_mutex = PTHREAD_MUTEX_INITIALIZER;
 
@@ -30,7 +30,7 @@ void sim_log(const char *fmt, ...)
     pthread_mutex_unlock(&log_mutex);
 }
 
-/* ── Usage ──────────────────────────────────────────────────────────────────── */
+// Usage
 
 static void usage(const char *prog)
 {
@@ -45,13 +45,13 @@ static void usage(const char *prog)
     exit(EXIT_FAILURE);
 }
 
-/* ── Main ───────────────────────────────────────────────────────────────────── */
+// Main
 
 int main(int argc, char *argv[])
 {
     srand((unsigned)time(NULL));
 
-    /* ── Parse arguments ────────────────────────────────────────────────── */
+    // Parse arguments
     Config cfg = { .numBowls = 0, .numCats = 0, .numMice = 0, .catEat = 0, .catFull = 0 };
     int opt;
     while ((opt = getopt(argc, argv, "B:C:M:F:N:")) != -1) {
@@ -70,13 +70,13 @@ int main(int argc, char *argv[])
     printf("Starting simulation: B=%d C=%d M=%d F=%d N=%d\n",
            cfg.numBowls, cfg.numCats, cfg.numMice, cfg.catEat, cfg.catFull);
 
-    /* ── Initialise shared state ────────────────────────────────────────── */
+    // Initialize shared state
     SimState state;
     memset(&state, 0, sizeof(state));
     state.cfg         = cfg;
     state.active_cats = 0;
 
-    /* Named semaphores – required on macOS (sem_init is deprecated) */
+    // Named semaphores
     sem_unlink("/cat_bowls");
     sem_unlink("/mouse_bowls");
     state.cat_bowls   = sem_open("/cat_bowls",   O_CREAT, 0644, cfg.numBowls);
@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
     pthread_cond_init(&state.no_cats,      NULL);
     pthread_cond_init(&state.cats_present, NULL);
 
-    /* ── Spawn cat threads ──────────────────────────────────────────────── */
+    // Start cat threads
     pthread_t *cat_threads = malloc(cfg.numCats * sizeof(pthread_t));
     CatArgs   *cat_args    = malloc(cfg.numCats * sizeof(CatArgs));
     for (int i = 0; i < cfg.numCats; i++) {
@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
         pthread_create(&cat_threads[i], NULL, cat_thread, &cat_args[i]);
     }
 
-    /* ── Spawn mouse threads ────────────────────────────────────────────── */
+    // Start mouse threads
     pthread_t *mouse_threads = malloc(cfg.numMice * sizeof(pthread_t));
     MouseArgs *mouse_args    = malloc(cfg.numMice * sizeof(MouseArgs));
     for (int i = 0; i < cfg.numMice; i++) {
@@ -107,17 +107,17 @@ int main(int argc, char *argv[])
         pthread_create(&mouse_threads[i], NULL, mouse_thread, &mouse_args[i]);
     }
 
-    /* ── Run until Enter is pressed ─────────────────────────────────────── */
+    // Run until simulation is stopped
     printf("Simulation running. Press Enter to stop.\n");
     getchar();
 
-    /* ── Cancel and join all threads ────────────────────────────────────── */
+    // Cancel & join threads
     for (int i = 0; i < cfg.numCats; i++) pthread_cancel(cat_threads[i]);
     for (int i = 0; i < cfg.numMice; i++) pthread_cancel(mouse_threads[i]);
     for (int i = 0; i < cfg.numCats; i++) pthread_join(cat_threads[i], NULL);
     for (int i = 0; i < cfg.numMice; i++) pthread_join(mouse_threads[i], NULL);
 
-    /* ── Cleanup ────────────────────────────────────────────────────────── */
+    // Clean
     sem_close(state.cat_bowls);
     sem_close(state.mouse_bowls);
     sem_unlink("/cat_bowls");
